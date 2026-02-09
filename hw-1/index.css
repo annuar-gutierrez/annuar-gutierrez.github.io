@@ -1,0 +1,47 @@
+h1{
+    text-align: center;
+    font-size: 2.5em;
+    color: lightseagreen;
+}
+h2{
+    text-align: center;
+    font-size: 2.0em;
+    color: lightseagreen;
+}
+body{
+    background-color: beige;
+    color: hsl(0, 150, 100);
+}
+
+header{
+    text-align: center;
+    font-size: 1.7em;
+    color: gray;
+}
+
+a{
+    color: green;
+}
+a:hover{
+    color:palevioletred;
+}
+a:active{
+    color: blueviolet;
+}
+
+.textBig{
+    font-size: 1.3em;
+    color: darkgreen;
+}
+
+.leftSide{
+    display:flex;
+    align-items: center;
+    gap: 20px;
+}
+.rounded-img{
+    border-top-right-radius:40px;
+    border-bottom-right-radius:40px;
+    border-top-left-radius:40px;
+    border-bottom-left-radius:40px;
+}
