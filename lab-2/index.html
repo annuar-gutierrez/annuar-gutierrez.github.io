@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guess The Number!</title>
+        <script src="scripts/script.js" defer></script>
+    </head>
+    <body>
+        <header id="customHeader">
+            <h1>Guess the correct number!</h1>
+            <h2>Enter a number between 1 to 99 in less than 7 tries to win!</h2>
+        </header>
+
+        <hr>
+        <div id="cssGuessArea">
+            Guess:
+        <input id = "guessInput" type="text" size="3" style="font-size: 0.8em;">
+        <button id = "guessButton" style="font-size: 0.8em;">Guess</button>
+        <button id = "resetButton" style="font-size: 0.8em;">Reset</button>
+        </div>
+
+        <br>
+
+        <div id="cssGuesses">
+            Previous Guesses:
+            <span id="userGuesses"></span>
+        </div>
+
+        <br>
+
+        <div id = cssResults>
+            Results:
+            <span id="guessResult"></span>
+        </div>
+
+        <br>
+
+        <div id="cssAttempts">
+            Attempts:
+            <span id="guessesTotal"></span>
+        </div>
+
+        <hr>
+
+        <footer>
+            <div>
+                Games Won:
+                <span id="gameW"></span>
+            </div>
+            <div>
+                Games Lost:
+                <span id="gameL"></span>
+            </div>
+        </footer>
+
+    </body>
+</html>
