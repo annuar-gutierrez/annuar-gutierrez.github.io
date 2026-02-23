@@ -22,7 +22,7 @@ function shuffleQ1Choices(){
 
     document.querySelector("#q1ChoicesDiv").append(labelElement);
 
-    console.log(labelElement);
+    //console.log(labelElement);
     } 
 }
 
@@ -46,12 +46,12 @@ function shuffleQ2Choices(){
 
     document.querySelector("#q2ChoicesDiv").append(labelElement);
 
-    console.log(labelElement);
+    //console.log(labelElement);
     //}
 
 }
 
-shuffleQ3Choices()
+//shuffleQ3Choices()
 function shuffleQ3Choices(){
 
     let q3Choices = ["<!-- text -->","// text","/- text -/"];
@@ -71,11 +71,11 @@ function shuffleQ3Choices(){
 
     document.querySelector("#q3ChoicesDiv").append(labelElement);
 
-    console.log(labelElement);
+    //console.log(labelElement);
     }
 }
 
-shuffleQ4Choices()
+//shuffleQ4Choices()
 function shuffleQ4Choices(){
 
     let q4Choices = ["5","6","7"];
@@ -95,9 +95,33 @@ function shuffleQ4Choices(){
 
     document.querySelector("#q4ChoicesDiv").append(labelElement);
 
-    console.log(labelElement);
+    //console.log(labelElement);
     }
 }
+
+// shuffleQ5Choices()
+// function shuffleQ5Choices(){
+
+//     let q5Choices = ["font-color","color","text-color"];
+
+//     //Question 1
+//     for(let i of q5Choices){
+//     let radioElement = document.createElement("input");
+//     radioElement.type = "radio";
+//     radioElement.name = "q5";
+//     radioElement.value = i;
+
+//     let labelElement = document.createElement("label");
+//     labelElement.textContent = i;
+
+//     labelElement.prepend(radioElement);
+//     labelElement.prepend(" ")
+
+//     document.querySelector("#q5ChoicesDiv").append(labelElement);
+
+//     //console.log(labelElement);
+//     } 
+// }
 
 
 function gradeQuiz(){
@@ -105,43 +129,55 @@ function gradeQuiz(){
     let q2userAnswer = document.querySelector("#q2").value;
     let q3userAnswer = document.querySelector("#q3").value;
     let q4userAnswer = document.querySelector("#q4").value;
-    alert("check")
+    let q5userAnswer = document.querySelector("#q5").value;
 
-
-    alert("grading quiz.. "  + q1userAnswer + " | " +q2userAnswer + " | " +q3userAnswer + " | " + q4userAnswer +" | ");
+    //alert("grading quiz.. "  + q1userAnswer + " | " +q2userAnswer + " | " +q3userAnswer + " | " + q4userAnswer +" | " + q5userAnswer);
     points = 0;
     if(q1userAnswer == "color"){
         points += 20;
-        document.querySelector("#q1userAnswer").textContent = "correct q1";
+        document.querySelector("#q1userAnswer").textContent = " | " + q1userAnswer + " | ";
         document.querySelector("#q1userAnswer").style.color = "green";
     } else {
-        document.querySelector("#q1userAnswer").textContent = "incorrect q1"
-        document.querySelector("#q1userAnswer").style.color = "red"
+        document.querySelector("#q1userAnswer").textContent = " | " + q1userAnswer + " | ";
+        document.querySelector("#q1userAnswer").style.color = "red";
     }
     if(q2userAnswer == "active"){
         points += 20;
-        document.querySelector("#q2userAnswer").textContent = "correct q2"
-        document.querySelector("#q2userAnswer").style.color = "green"
+        document.querySelector("#q2userAnswer").textContent = q2userAnswer + " | ";
+        document.querySelector("#q2userAnswer").style.color = "green";
     } else {
-        document.querySelector("#q2userAnswer").textContent = "incorrect q2"
-        document.querySelector("#q2userAnswer").style.color = "red"
+        document.querySelector("#q2userAnswer").textContent = q2userAnswer + " | ";
+        document.querySelector("#q2userAnswer").style.color = "red";
     }
-    if(q3userAnswer == "// text"){
+    if(q3userAnswer == "//text"){
         points += 20;
-        document.querySelector("#q3userAnswer").textContent = "correct q3"
-        document.querySelector("#q3userAnswer").style.color = "green"
+        document.querySelector("#q3userAnswer").textContent = q3userAnswer + " | ";
+        document.querySelector("#q3userAnswer").style.color = "green";
     } else {
-        document.querySelector("#q3userAnswer").textContent = "incorrect q3"
-        document.querySelector("#q3userAnswer").style.color = "red"
+        document.querySelector("#q3userAnswer").textContent = q3userAnswer + " | ";
+        document.querySelector("#q3userAnswer").style.color = "red";
     }
     if(q4userAnswer == "6"){
         points += 20;
-        document.querySelector("#q4userAnswer").textContent = "correct q4"
-        document.querySelector("#q4userAnswer").style.color = "green"
+        document.querySelector("#q4userAnswer").textContent = q4userAnswer + " | ";
+        document.querySelector("#q4userAnswer").style.color = "green";
     } else {
-        document.querySelector("#q4userAnswer").textContent = "incorrect q4"
-        document.querySelector("#q4userAnswer").style.color = "red"
+        document.querySelector("#q4userAnswer").textContent = q4userAnswer + " | ";
+        document.querySelector("#q4userAnswer").style.color = "red";
+    }
+    if(q5userAnswer == "semicolon"){
+        points += 20;
+        document.querySelector("#q5userAnswer").textContent = q5userAnswer + " | ";
+        document.querySelector("#q5userAnswer").style.color = "green";
+    } else {
+        document.querySelector("#q5userAnswer").textContent = q5userAnswer + " | ";
+        document.querySelector("#q5userAnswer").style.color = "red";
     }
     document.querySelector("#po1").textContent = points;
+
+    if(points >= 80){
+        document.querySelector("#message").textContent = "You Passed!";
+        document.querySelector("#message").style.color = "green";
+    }
 
 }

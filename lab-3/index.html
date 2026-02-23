@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="index.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quiz</title>
@@ -10,7 +11,8 @@
     </head>
     <body>
 
-        <h1> CSS Quiz</h1>
+        <h1> CSS Quiz </h1>
+        <hr>
 
         1. What property changes font color?
 
@@ -21,40 +23,59 @@
 
         <div id="q1ChoicesDiv"></div>
         
-        2. What HTML property allows elements to chance when clicked on?
+        2. What HTML property allows elements to change when clicked on?
         <!-- <div id="q2ChoicesDiv"></div> -->
-        <select id="q2">
+        <select id="q2" style="font-size: 0.8em;">
             <option value="active">active</option>
             <option value="hover">hover</option>
             <option value="click">click</option>
         </select>
+        <div id="q2Right"></div>
+        <div id="q2Wrong"></div>
         <br>
 
-        3. What method is the correct way to comment out text in Java?
+        3. What method is the correct way to comment out text in Java? (End it with the word "text")
         <!-- <div id="q3ChoicesDiv"></div> -->
-        <input type="text" id = "q3">
+        <input type="text" id = "q3" style="font-size: 0.8em;">
+        <div id="q3Right"></div>
+        <div id="q3Wrong"></div>
         <br>
 
         4. How many h# elements are there?
         <!-- <div id="q4ChoicesDiv"></div> -->
-        <input type="number" id = "q4">
+        <input type="number" id = "q4" style="font-size: 0.8em;">
+        <div id="q4Right"></div>
+        <div id="q4wrong"></div>
         <br>
 
-        5. What is the correct way
-        <div id="q5ChoicesDiv"></div>
-
-        <button id="check"> Submit Quiz</button>
-
+        5. What is the correct way to end a statement in java?
+        <select id="q5" style="font-size: 0.8em;">
+            <option value="colon">colon (:)</option>
+            <option value="semicolon">semicolon (;)</option>
+            <option value="comma">comma (,)</option>
+        </select>
+        <div id="q5Right"></div>
+        <div id="q4Wrong"></div>
         <br>
 
-        Answers:
+        <button id="check" style="font-size: 0.8em;"> Submit Quiz</button>
+
+        <hr>
+
+        
+
+    </body>
+    <footer>
+            Answers:
         <span id="q1userAnswer"></span>
         <span id="q2userAnswer"></span>
         <span id="q3userAnswer"></span>
         <span id="q4userAnswer"></span>
+        <span id="q5userAnswer"></span>
         <br>
         Points:
         <span id="po1"></span>
+        <span id="message"></span>
 
-    </body>
+        </footer>
 </html>

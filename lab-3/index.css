@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+    color: white;
+    background-color: black;
+    border-radius: 30px;
+    font-size: 3em;
+}
+
+body{
+    text-align: center;
+    background-color: burlywood;
+    font-size: 2em;
+}
+
+footer{
+    text-align: center;
+    color:white;
+    background-color: black;
+    font-size: 2em;
+    border-radius: 30px;
+}
