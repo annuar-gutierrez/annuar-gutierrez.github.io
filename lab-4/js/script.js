@@ -30,7 +30,60 @@ zipCodeInput.addEventListener("input", async function(){
     }
     
 })
+
+let suggestedPassword = document.querySelector("#passwordInput");
+suggestedPassword.addEventListener("click", async function(){
+
+    let urlPass = `https://csumb.space/api/suggestedPassword.php?length=8`;
+    try {
+        const response = await fetch(urlPass);
+        if(!response.ok){
+            throw new Error("Error accessing API endpoint");
+        }
+        const data = await response.json();
+
+        document.querySelector("#suggestedPassword").textContent = " | Suggested Password: " + data.password + "  |";
+
+    } catch (err){
+        if (err instanceof TypeError) {
+        alert("Error accessing API endpoint (network failure)");
+        } else {
+        alert(err.message);
+        }
+    }
     
+});
+    
+let takenUsernames = document.querySelector("#usernameInput");
+takenUsernames.addEventListener("input", async function () {
+
+    let urlNames = `https://csumb.space/api/usernamesAPI.php?username=${usernameInput.value}`;
+
+    try {
+        const response = await fetch(urlNames);
+        if (!response.ok){
+            throw new Error("Error accessing API endpoint");
+        }
+        const data = await response.json();
+        console.log(data);
+
+        if(data.available){
+            document.querySelector("#usernameMessage").textContent = " Username is Available";
+            document.querySelector("#usernameMessage").style.color = "green";
+        } else {
+            document.querySelector("#usernameMessage").textContent = " Username is Taken";
+            document.querySelector("#usernameMessage").style.color = "red";
+        }
+        
+    } catch (err){
+        if (err instanceof TypeError) {
+        alert("Error accessing API endpoint (network failure)");
+        } else {
+        alert(err.message);
+        }
+    }
+    
+})
     
 
 
