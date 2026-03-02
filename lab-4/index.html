@@ -17,19 +17,23 @@
         Email: <input type="text"><br> 
         Phone Number:<input type="text"><br><br>
         Zip Code: <input id="zipCodeInput" type="text"><br>
-        City: <span id="cityDisplay"></span>
+        City: <span id="cityDisplay"></span><span id="cityError"></span>
         <br>
         Latitude: <span id="latitude"></span>
         <br>
         Longitude: <span id="longitude"></span>
         <br><br>
-        State:  <select></select><br>
-        Select a County: <select></select><br>
+        State:  <select id="statesSelect" ></select><br>
+        Select a County: <select id="countySelect"></select><br>
 
         Desired Username: <input id="usernameInput"type="text"><span id="usernameMessage"></span><br>
         Password: <input id="passwordInput" type="password"><span id="suggestedPassword"></span><br>
         Type Password Again: <input id="passwordCheck" type="password"><br>
-        <input type="submit" value="Sign up!">
+
+        <span id=”passwordError”></span> 
+
+
+        <input id="submitButton"type="submit" value="Sign up!">
         </fieldset>
 
         <script src="js/script.js"></script>
